@@ -3361,7 +3361,7 @@ input.validation-error {
 
 .act-icon-bg{
   display: flex;
-  background-color: var(--highlighta);
+  background-color: #0064a4;
   padding: 1rem;
   border-radius: 50%;
   border: 2px solid var(--highlighta);
