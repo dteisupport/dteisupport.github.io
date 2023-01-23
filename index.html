@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="/styles/svg/toolbox-blue.svg">
+  <link rel="stylesheet" type="text/css" href="/styles/grid3.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script type="module" src="/scripts/activity_finder.js"></script>
+  <script type="module" src="/scripts/scroller.js"></script>
+  <script type="text/javascript" src="/scripts/filter.js"></script>
+
+  <title>Digital Active Learning Library - Teaching Tools</title>
+</head>
+
+  <body>
+    <noscript>JavaScript is required for this site to work properly. Please re-enable JavaScript in your browser settings.</noscript>
+
+    <div class="content-wrapper">
+      <div class="content-grid left">
+        <div class="left-col-relative">
+          <div id="tips-spacer"></div>
+          <div class="tips-box top">
+            <div class="tips-box-inner">
+              <h2>Filters</h2>
+                <button id="clear-all" class="clear-filters-button">Clear All</button>
+                <div class="all-filters">
+                  
+  <div class="tips-divide"></div>
+  <div class="filter-heading-row">
+    <h3 class="filter-heading">Class Size</h3>
+    <button class="clear-filters-button">Clear</button>
+  </div>
+  <ul id="Class-size-list" class="filter-list">     
+    <li>
+      <input type="checkbox" id="small" name="Small">
+      <label for="small">Small</label>
+    </li>
+      
+    <li>
+      <input type="checkbox" id="large" name="Large">
+      <label for="large">Large</label>
+    </li>
+  </ul>
+
+  <div class="tips-divide"></div>
+  <div class="filter-heading-row">
+    <h3 class="filter-heading">Type of Interaction</h3>
+    <button class="clear-filters-button">Clear</button>
+  </div>
+  <ul id="interaction-list" class="filter-list">  
+    <li>
+      <input type="checkbox" id="Student-Content" name="Student-Content">
+      <label for="Student-Content">Student-Content</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Student-Student" name="Student-Student">
+      <label for="Student-Student">Student-Student</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Student-Instructor" name="Student-Instructor">
+      <label for="Student-Instructor">Student-Instructor</label>
+    </li>
+  </ul>
+
+  <div class="tips-divide"></div>
+  <div class="filter-heading-row">
+    <h3 class="filter-heading">Instructional Mode</h3>
+    <button class="clear-filters-button">Clear</button>
+  </div>
+  <ul id="Instructional-Mode-list" class="filter-list">  
+    <li>
+      <input type="checkbox" id="In-Person" name="In-Person">
+      <label for="In-Person">In-Person</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Hybrid" name="Hybrid">
+      <label for="Hybrid">Hybrid</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Flipped" name="Flipped">
+      <label for="Flipped">Flipped</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Online" name="Online">
+      <label for="Online">Online</label>
+    </li>
+  </ul>
+
+  <div class="tips-divide"></div>
+  <div class="filter-heading-row">
+    <h3 class="filter-heading">Engagement</h3>
+    <button class="clear-filters-button">Clear</button>
+  </div>
+  <ul id="Engagement-list" class="filter-list">  
+    <li>
+      <input type="checkbox" id="Individual" name="Individual">
+      <label for="Individual">Individual</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Pairs" name="Pairs">
+      <label for="Pairs">Pairs</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Small-Groups" name="Small Groups">
+      <label for="Small-Groups">Small Groups</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Large-Groups" name="Large Groups">
+      <label for="Large-Groups">Large Groups</label>
+    </li>
+  </ul>
+
+  <div class="tips-divide"></div>
+  <div class="filter-heading-row">
+    <h3 class="filter-heading">Activity Time</h3>
+    <button class="clear-filters-button">Clear</button>
+  </div>
+  <ul id="Activity-Time-list" class="filter-list">  
+    <li>
+      <input type="checkbox" id="1-5" name="1 - 5 minutes">
+      <label for="1-5">1 - 5 minutes</label>
+    </li>
+    <li>
+      <input type="checkbox" id="5-10" name="5 - 10 minutes">
+      <label for="5-10">5 - 10 minutes</label>
+    </li>
+    <li>
+      <input type="checkbox" id="10-15" name="10 - 15 minutes">
+      <label for="10-15">10 - 15 minutes</label>
+    </li>
+    <li>
+      <input type="checkbox" id="15-20" name="15 - 20 minutes">
+      <label for="15-20">15 - 20 minutes</label>
+    </li>
+  </ul>
+
+  <div class="tips-divide"></div>
+  <div class="filter-heading-row">
+    <h3 class="filter-heading">Prep Time</h3>
+    <button class="clear-filters-button">Clear</button>
+  </div>
+  <ul id="Prep-Time-list" class="filter-list">  
+    <li>
+      <input type="checkbox" id="Low" name="Low">
+      <label for="Low">Low: Less than 5 minutes</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Average" name="Average">
+      <label for="Average">Average: 5 to 30 minutes</label>
+    </li>
+    <li>
+      <input type="checkbox" id="High" name="High">
+      <label for="High">High: More than 30 Minutes</label>
+    </li>
+  </ul>
+
+  <div class="tips-divide"></div>
+  <div class="filter-heading-row">
+    <h3 class="filter-heading">Learning Strategy</h3>
+    <button class="clear-filters-button">Clear</button>
+  </div>
+  <ul id="Learning-list" class="filter-list">  
+    <li>
+      <input type="checkbox" id="Metacognition" name="Metacognition">
+      <label for="Metacognition">Metacognition</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Memorization" name="Memorization">
+      <label for="Memorization">Memorization</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Application" name="Application">
+      <label for="Application">Application</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Question" name="Question">
+      <label for="Question">Question</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Discussion" name="Discussion">
+      <label for="Discussion">Discussion</label>
+    </li>
+  </ul>
+
+  <div class="tips-divide"></div>
+  <div class="filter-heading-row">
+    <h3 class="filter-heading">Digital Tools <br> or Programs Required</h3>
+    <button class="clear-filters-button">Clear</button>
+  </div>
+  <ul id="Digital-Tools-list" class="filter-list">  
+    <li>
+      <input type="checkbox" id="Zoom" name="Zoom">
+      <label for="Zoom">Zoom</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Poll" name="Poll">
+      <label for="Poll">Poll Everywhere</label>
+    </li>
+    <li>
+      <input type="checkbox" id="iClicker" name="iClicker">
+      <label for="iClicker">iClicker</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Yuja" name="Yuja">
+      <label for="Yuja">Yuja</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Canvas" name="Canvas">
+      <label for="Canvas">Canvas</label>
+    </li>
+    <li>
+      <input type="checkbox" id="Google" name="Google">
+      <label for="Google">Google Doc</label>
+    </li>
+  </ul>
+
+
+                </div>
+            </div>
+          </div>
+        </div>
+        <div id="act-cards-container" class="card-col nogap">
+          
+
+<div id="all-acts-container">
+  <div id="no-acts" class="activity-card-wrapper hidden">
+    <div class="activity-card-static" tabindex="0">
+      <div class="act-icon-bg-orange"><img class="activity-card-icon" src="/styles/svg/exclamation-triangle.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+      <div class="activity-info">
+        <div class="activity-info-top">
+          <div class="activity-card-title">No Activities Found</div>
+          <div class="activity-card-description">Try broadening your search criteria.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="act-list-container">
+    <div id="act-count" class="hidden"></div>
+  
+    <div class="activity-card-wrapper" id="Skeletal Notes / Fill-in-the-blanks">
+      <div id="Skeletal Notes / Fill-in-the-blanks" class="activity-card" tabindex="0">
+        <button class="close-card-button">
+          <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+        </button>
+        <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/card-text.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+        <div class="activity-info">
+          <div class="activity-info-top">
+            <div class="activity-card-title">Skeletal Notes / Fill-in-the-blanks</div>
+            <div class="activity-card-description">This activity is one of the simple ways to engage students while they are participating in your lecture. Provide a set of incomplete lecture notes or PowerPoint slides with some of the parts missing for students to use while they are participating in the lecture. It is effective to choose the key words or key concepts to be blanked out for students to fill in.</div>
+          </div>
+          <div class="best-practices">
+            
+            <div class="tips-divide"></div>
+            <div class="actcard-icon-section">
+              <div class="actcard-icon-row">
+                <div>Class Size: Large, Small</div>
+              </div>
+              <div class="actcard-icon-row">
+                <div>Instructional Mode: In-Person, Hybrid, Flipped, Online </div>
+              </div>
+              <div class="actcard-icon-row">
+                <div>Engagement: Individual</div>
+              </div>
+              <div class="actcard-icon-row">
+                <div>Learning Strategy: Memorization</div>
+              </div>
+              <div class="actcard-icon-row">
+                <div>
+                  Digital Tools or Programs Required: Zoom
+              </div>
+
+              </div>
+            </div>
+            
+            <div class="tips-divide"></div>
+            <div id="actprops" class="active">
+              <div class="actprops-col">
+                <div class="actprops-title large">Type of Interaction</div>
+                <div>Student-Content</div>
+              </div>
+              <div class="actprops-col">
+                <div class="actprops-title large">Activity Time</div>
+                <div>Lecture Time</div>
+              </div>
+              <div class="actprops-col">
+                <div class="actprops-title large">PREP TIME</div>
+                <div>High: More than 30 Minutes</div>
+              </div>
+            </div>
+            <div class="tips-divide"></div>
+            
+            <h4>Synchronous</h4>
+            <div class="best-practices-notes">
+              <ul class="bp-list">
+              
+              <li class="bp">Provide the lecture notes prior to live lecture so students can open it before joining</li>
+              
+              <li class="bp">Display incomplete PowerPoint slides throughout the live lecture.</li>
+            </ul>
+            </div>
+            <h4>Asynchronous</h4>
+            <div class="best-practices-notes">
+              <ul class="bp-list">
+              
+              <li class="bp">Provide the incomplete notes or slides for students to complete along with the video recordings or readings.</li>
+                            
+            </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<!--   -->
+
+    <div class="activity-card-wrapper" id="Updating Notes / Catch-Up">
+      <div id="Updating Notes / Catch-Up" class="activity-card" tabindex="0">
+        <button class="close-card-button">
+          <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+        </button>
+        <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/lead-pencil.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+        <div class="activity-info">
+          <div class="activity-info-top">
+            <div class="activity-card-title">Updating Notes / Catch-Up</div>
+            <div class="activity-card-description">After a topic lecture is done, 2-3 mins to allow students to gather their notes and organize their thoughts before advancing on to the next content segment. This can be expanded to a short breakout room to share their notes with each other and ask any clarifying questions for a few minutes.</div>
+          </div>
+          <div class="best-practices">
+            
+            <div class="tips-divide"></div>
+            <div class="actcard-icon-section">
+              <div class="actcard-icon-row">
+                <div>Class Size: Large, Small</div>
+              </div>
+              <div class="actcard-icon-row">
+                <div>Instructional Mode: In-Person, Hybrid, Online </div>
+              </div>
+              <div class="actcard-icon-row">
+                <div>Engagement: Individual, Pairs, Small Groups</div>
+              </div>
+              <div class="actcard-icon-row">
+                <div>Learning Strategy: Memorization</div>
+              </div>
+              <div class="actcard-icon-row">
+                <div>
+                  Digital Tools or Programs Required: Zoom
+              </div>
+
+              </div>
+            </div>
+            
+            <div class="tips-divide"></div>
+            <div id="actprops" class="active">
+              <div class="actprops-col">
+                <div class="actprops-title large">Type of Interaction</div>
+                <div>Student-Content</div>
+              </div>
+              <div class="actprops-col">
+                <div class="actprops-title large">Activity Time</div>
+                <div>5 - 10 minutes</div>
+              </div>
+              <div class="actprops-col">
+                <div class="actprops-title large">PREP TIME</div>
+                <div>Low: Less than 5 minutes</div>
+              </div>
+            </div>
+            <div class="tips-divide"></div>
+            
+            <h4>Synchronous</h4>
+            <div class="best-practices-notes">
+              <ul class="bp-list">
+              
+              <li class="bp">Pause after sections of the lecture to allow time for students to update their notes</li>
+              
+              <li class="bp">Use breakout rooms to allow students to share notes and update each other.</li>
+            </ul>
+            </div>
+            <h4>Asynchronous</h4>
+            <div class="best-practices-notes">
+              <ul class="bp-list">
+              
+              <li class="bp">Post shorter lecture videos or pause during recordings to allow students to make notes</li>
+              <li class="bp">Use group/class notebooks so students can share notes</li>
+                            
+            </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<!--         -->
+<div class="activity-card-wrapper" id="Check-In Activities">
+  <div id="Check-In Activities" class="activity-card" tabindex="0">
+    <button class="close-card-button">
+      <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+    </button>
+    <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/account-check-outline.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+    <div class="activity-info">
+      <div class="activity-info-top">
+        <div class="activity-card-title">Check-In Activities</div>
+        <div class="activity-card-description">Like iClicker questions, you can add check-in questions in between asynchronous videos using YuJa Quiz or provide check-in questions or discussion as a follow-up activity after the topic to help students check-in their understanding of the topic. </div>
+      </div>
+      <div class="best-practices">
+        
+        <div class="tips-divide"></div>
+        <div class="actcard-icon-section">
+          <div class="actcard-icon-row">
+            <div>Class Size: Large, Small</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Instructional Mode: In-Person, Hybrid, Flipped, Online </div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Engagement: Individual, Large Group</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Learning Strategy: Memorization, Question</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>
+              Digital Tools or Programs Required: Zoom, Poll Everywhere, iClicker, Yuja
+          </div>
+
+          </div>
+        </div>
+        
+        <div class="tips-divide"></div>
+        <div id="actprops" class="active">
+          <div class="actprops-col">
+            <div class="actprops-title large">Type of Interaction</div>
+            <div>Student-Content</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">Activity Time</div>
+            <div>10 - 15 minutes</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">PREP TIME</div>
+            <div>Average: 5 to 30 minutes</div>
+          </div>
+        </div>
+        <div class="tips-divide"></div>
+        
+        <h4>Synchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Polling in Zoom, Poll Everywhere activities or iClicker/Reef polling app. Access Polling @ UCI to learn more about the polling options</li>
+        </ul>
+        </div>
+        <h4>Asynchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">YuJa Quiz or using Canvas Assignment, Discussion or Quiz to provide this activity. To learn more on how to set them, please access how to deliver instructional videos with check-in activities (Google doc)</li>
+        </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--   -->
+
+<div class="activity-card-wrapper" id="Think/Write - Pair - Share (TPS)">
+  <div id="Think/Write - Pair - Share (TPS)" class="activity-card" tabindex="0">
+    <button class="close-card-button">
+      <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+    </button>
+    <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/head-dots-horizontal-outline.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+    <div class="activity-info">
+      <div class="activity-info-top">
+        <div class="activity-card-title">Think/Write - Pair - Share (TPS)</div>
+        <div class="activity-card-description">TPS is a collaborative active learning strategy where students either solve or discuss an assigned topic(s). This helps students to think or write individually first and encourages them to share ideas with classmates. This activity maximizes participation, focuses attention and engages students in comprehending the topic.</div>
+      </div>
+      <div class="best-practices">
+        
+        <div class="tips-divide"></div>
+        <div class="actcard-icon-section">
+          <div class="actcard-icon-row">
+            <div>Class Size: Large, Small</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Instructional Mode: In-Person, Hybrid, Flipped, Online </div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Engagement: Pairs</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Learning Strategy: Application, Discussion</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>
+              Digital Tools or Programs Required: Zoom</div>
+          </div>
+        </div>
+        
+        <div class="tips-divide"></div>
+        <div id="actprops" class="active">
+          <div class="actprops-col">
+            <div class="actprops-title large">Type of Interaction</div>
+            <div>Student-Student</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">Activity Time</div>
+            <div>10 - 15 minutes</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">PREP TIME</div>
+            <div>Low: Less than 5 minutes</div>
+          </div>
+        </div>
+        <div class="tips-divide"></div>
+        
+        <h4>Synchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Prompt and pause during live lecture for students to think or write</li>
+          <li class="bp">Use breakout rooms to allow small groups to share their thoughts</li>
+        </ul>
+        </div>
+        <h4>Asynchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Use discussion boards to provide a prompt for students to think and post.</li>
+          <li class="bp">Use the “students must post a reply before seeing others" responses” option</li>
+        </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--   -->
+
+<div class="activity-card-wrapper" id="Role Playing">
+  <div id="Role Playing" class="activity-card" tabindex="0">
+    <button class="close-card-button">
+      <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+    </button>
+    <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/drama-masks.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+    <div class="activity-info">
+      <div class="activity-info-top">
+        <div class="activity-card-title">Role Playing</div>
+        <div class="activity-card-description">Ask students to “act out” a position or argument in groups using Zoom breakout rooms or another collaborative space, to get a better idea of the concepts and theories being discussed. Role-playing exercises can range from the simple to the complex (e.g., skeptic, community member, scientist, historical figure, etc.).</div>
+      </div>
+      <div class="best-practices">
+        
+        <div class="tips-divide"></div>
+        <div class="actcard-icon-section">
+          <div class="actcard-icon-row">
+            <div>Class Size: Small</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Instructional Mode: In-Person, Hybrid, Flipped, Online </div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Engagement: Pairs, Small Groups</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Learning Strategy: Application</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>
+              Digital Tools or Programs Required: Zoom</div>
+          </div>
+        </div>
+        
+        <div class="tips-divide"></div>
+        <div id="actprops" class="active">
+          <div class="actprops-col">
+            <div class="actprops-title large">Type of Interaction</div>
+            <div>Student-Student</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">Activity Time</div>
+            <div>15 - 20 minutes</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">PREP TIME</div>
+            <div>High: More than 30 Minutes</div>
+          </div>
+        </div>
+        <div class="tips-divide"></div>
+        
+        <h4>Synchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Use Zoom breakout rooms, smaller classes can role play in the main room</li>
+        </ul>
+        </div>
+        <h4>Asynchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Use the discussion board to post the prompt for the role play</li>
+          <li class="bp">Students can respond with a video recording or voice recording</li>
+        </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--   -->
+
+<div class="activity-card-wrapper" id="Problem Solving / Case Study">
+  <div id="Problem Solving / Case Study" class="activity-card" tabindex="0">
+    <button class="close-card-button">
+      <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+    </button>
+    <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/thought-bubble-outline.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+    <div class="activity-info">
+      <div class="activity-info-top">
+        <div class="activity-card-title">Problem Solving / Case Study</div>
+        <div class="activity-card-description">This activity is similar to TPS however instead of a topic to discuss, you will give them a problem or case study to solve together first and debrief the answers as a class. It’s important to provide a challenging question (not an easy one!) and give them a proper time to come up with the solution(s). This can be used as a competition activity where a group that comes up with the best solution(s) or answer first will get some sort of reward (extra points, extra time for next test, etc.).</div>
+      </div>
+      <div class="best-practices">
+        
+        <div class="tips-divide"></div>
+        <div class="actcard-icon-section">
+          <div class="actcard-icon-row">
+            <div>Class Size: Large, Small</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Instructional Mode: In-Person, Hybrid, Flipped, Online </div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Engagement: Pairs, Small Groups</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Learning Strategy: Application</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>
+              Digital Tools or Programs Required: Zoom</div>
+          </div>
+        </div>
+        
+        <div class="tips-divide"></div>
+        <div id="actprops" class="active">
+          <div class="actprops-col">
+            <div class="actprops-title large">Type of Interaction</div>
+            <div>Student-Student</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">Activity Time</div>
+            <div>15 - 20 minutes</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">PREP TIME</div>
+            <div>High: More than 30 Minutes</div>
+          </div>
+        </div>
+        <div class="tips-divide"></div>
+        
+        <h4>Synchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Students can present their process using Zoom - allow them to share their screen</li>
+        </ul>
+        </div>
+        <h4>Asynchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Use the discussion boards to create a public space for students to share their process</li>
+          <li class="bp">Create weekly assignments around real-life scenarios - there are lots of resources for digital case studies and problem sets!"</li>
+        </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--   -->
+
+<div class="activity-card-wrapper" id="Jigsaw">
+  <div id="Jigsaw" class="activity-card" tabindex="0">
+    <button class="close-card-button">
+      <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+    </button>
+    <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/puzzle-outline.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+    <div class="activity-info">
+      <div class="activity-info-top">
+        <div class="activity-card-title">Jigsaw</div>
+        <div class="activity-card-description">Divide the class into small groups each of which is assigned a different task. Each group completes their task. Then, new groups are formed, each consisting of one member from each of the original groups (so all group members in the new group have completed a different task). Students then take turns presenting their work to the rest of the group. In this exercise each student is an “expert” in one task and exposed to all other tasks. This activity is to help students to develop effective ways to teach a topic to other classmates. Just as a jigsaw, each classmate’s part is important to complete and have a full understanding about the topic. To learn more about Jigsaw activity and 10 easy steps to implement it in your class.</div>
+      </div>
+      <div class="best-practices">
+        
+        <div class="tips-divide"></div>
+        <div class="actcard-icon-section">
+          <div class="actcard-icon-row">
+            <div>Class Size: Large, Small</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Instructional Mode: In-Person, Hybrid, Flipped, Online </div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Engagement: Small Groups</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Learning Strategy: Application, Discussion</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>
+              Digital Tools or Programs Required: Zoom</div>
+          </div>
+        </div>
+        
+        <div class="tips-divide"></div>
+        <div id="actprops" class="active">
+          <div class="actprops-col">
+            <div class="actprops-title large">Type of Interaction</div>
+            <div>Student-Student</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">Activity Time</div>
+            <div>15 - 20 minutes</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">PREP TIME</div>
+            <div>Average: 5 to 30 minutes</div>
+          </div>
+        </div>
+        <div class="tips-divide"></div>
+        
+        <h4>Synchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Students work in groups in breakout rooms</li>
+          <li class="bp">Groups report back to the whole group as the “jigsaw” is pieced together</li>
+        </ul>
+        </div>
+        <h4>Asynchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Groups work together in group pages or collaborations</li>
+          <li class="bp">Groups share their final product in the class discussion board where the Jigsaw is pieced together.</li>
+          <li class="bp">Instructor summarizes the big picture through documentation or video overview</li>
+        </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--   -->
+
+<div class="activity-card-wrapper" id="You are the Professor">
+  <div id="You are the Professor" class="activity-card" tabindex="0">
+    <button class="close-card-button">
+      <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+    </button>
+    <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/human-male-board.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+    <div class="activity-info">
+      <div class="activity-info-top">
+        <div class="activity-card-title">"You are the Professor"</div>
+        <div class="activity-card-description">After the lecture topic, pause and ask students/groups to come up with one or two questions based on what they just learned. Questions must be challenging (enough to stump their classmates). Each group will pose their questions to the class. Collect the questions (they might be used as possible exam questions or to check students’ comprehension).</div>
+      </div>
+      <div class="best-practices">
+        
+        <div class="tips-divide"></div>
+        <div class="actcard-icon-section">
+          <div class="actcard-icon-row">
+            <div>Class Size: Large, Small</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Instructional Mode: In-Person, Hybrid, Online </div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Engagement: Individual, Small Groups</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Learning Strategy: Question, Application, Discussion</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>
+              Digital Tools or Programs Required: Google Doc, Canvas, Gradescope, Ed Discussion</div>
+          </div>
+        </div>
+        
+        <div class="tips-divide"></div>
+        <div id="actprops" class="active">
+          <div class="actprops-col">
+            <div class="actprops-title large">Type of Interaction</div>
+            <div>Student-Student</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">Activity Time</div>
+            <div>15 - 20 minutes</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">PREP TIME</div>
+            <div>Average: 5 to 30 minutes</div>
+          </div>
+        </div>
+        <div class="tips-divide"></div>
+        
+        <h4>Synchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Students submit their questions during or at the end of live lecture via Google Doc or Canvas Assignment</li>
+          <li class="bp">Groups meet to discuss in breakout rooms and collect responses through Canvas Surveys, Quizzes or Assignment, or other UCI supported tools such as Gradescope, Ed Discussion or Google Doc</li>
+        </ul>
+        </div>
+        <h4>Asynchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Students participate in asynchronous lecture</li>
+          <li class="bp">Groups work together in discussion boards or group pages</li>
+          <li class="bp">Students/Groups submit responses through Canvas Surveys, Quizzes or Assignment, or other UCI supported tools such as Gradescope, Ed Discussion or Google Doc</li>
+
+        </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--   -->
+
+<div class="activity-card-wrapper" id="One Minute / Quick Write Reflection">
+  <div id="One Minute / Quick Write Reflection" class="activity-card" tabindex="0">
+    <button class="close-card-button">
+      <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+    </button>
+    <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/reflect-vertical.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+    <div class="activity-info">
+      <div class="activity-info-top">
+        <div class="activity-card-title">One Minute / Quick Write Reflection</div>
+        <div class="activity-card-description">After a topic has been presented, pause one minute for the student to reflect on what they’ve just learned. It will be helpful to give some guided questions that address learning outcomes of the topic(s) for students to reflect on. Although this strategy is called One minute reflection, it doesn’t have to be only one minute! This strategy is meant to be a quick pause to help students to process their learning.</div>
+      </div>
+      <div class="best-practices">
+        
+        <div class="tips-divide"></div>
+        <div class="actcard-icon-section">
+          <div class="actcard-icon-row">
+            <div>Class Size: Large, Small</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Instructional Mode: In-Person, Hybrid, Online </div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Engagement: Individual, Large Group</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Learning Strategy: Metacognition</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>
+              Digital Tools or Programs Required: Google Doc, Canvas, Poll Everywhere</div>
+          </div>
+        </div>
+        
+        <div class="tips-divide"></div>
+        <div id="actprops" class="active">
+          <div class="actprops-col">
+            <div class="actprops-title large">Type of Interaction</div>
+            <div>Student-Instructor</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">Activity Time</div>
+            <div>1 - 5 minutes</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">PREP TIME</div>
+            <div>Low: Less than 5 minutes</div>
+          </div>
+        </div>
+        <div class="tips-divide"></div>
+        
+        <h4>Synchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Students are prompted to write reflection during or at the end of live lecture</li>
+          <li class="bp">Collect responses through Canvas assignment or quiz/survey</li>
+        </ul>
+        </div>
+        <h4>Asynchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Students are prompted to write reflection during or after asynchronous lecture</li>
+          <li class="bp">Collect responses through Canvas assignment or quiz/survey (possibly timed quiz)</li>
+
+        </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--   -->
+<div class="activity-card-wrapper" id="Muddiest Point">
+  <div id="Muddiest Point" class="activity-card" tabindex="0">
+    <button class="close-card-button">
+      <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+    </button>
+    <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/robot-confused-outline.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+    <div class="activity-info">
+      <div class="activity-info-top">
+        <div class="activity-card-title">Muddiest Point</div>
+        <div class="activity-card-description">This reflection strategy is to help students to express the confusing/unclear part of the topic(s). This strategy helps you better assess student learning and helps students reflect on their learning process.</div>
+      </div>
+      <div class="best-practices">
+        
+        <div class="tips-divide"></div>
+        <div class="actcard-icon-section">
+          <div class="actcard-icon-row">
+            <div>Class Size: Large, Small</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Instructional Mode: In-Person, Hybrid, Online </div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Engagement: Individual, Large Group</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Learning Strategy: Metacognition</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>
+              Digital Tools or Programs Required: Google Doc, Canvas, Poll Everywhere</div>
+          </div>
+        </div>
+        
+        <div class="tips-divide"></div>
+        <div id="actprops" class="active">
+          <div class="actprops-col">
+            <div class="actprops-title large">Type of Interaction</div>
+            <div>Student-Instructor</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">Activity Time</div>
+            <div>1 - 5 minutes</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">PREP TIME</div>
+            <div>Low: Less than 5 minutes</div>
+          </div>
+        </div>
+        <div class="tips-divide"></div>
+        
+        <h4>Synchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Students are prompted to write response during or at the end of live lecture</li>
+          <li class="bp">Collect responses through Canvas Assignment or Quiz/Survey to share with instructor, or Canvas Discussion to share with class</li>
+        </ul>
+        </div>
+        <h4>Asynchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Students are prompted to write responses during or after asynchronous lecture</li>
+          <li class="bp">Collect responses through Canvas Assignment or Quiz/Survey to share with instructor, or Canvas Discussion to share with class</li>
+
+        </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--   -->
+<div class="activity-card-wrapper" id="Mind Dump">
+  <div id="Mind Dump" class="activity-card" tabindex="0">
+    <button class="close-card-button">
+      <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+    </button>
+    <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/head-snowflake-outline.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+    <div class="activity-info">
+      <div class="activity-info-top">
+        <div class="activity-card-title">Mind Dump</div>
+        <div class="activity-card-description">This activity is to help students to recall their learning from the previous classes. It's most effective to do this activity in the beginning of the class, before you start introducing a new topic. Take a few minutes for students to write down everything they remember from the previous module/week. This can be an individual, group or entire class activity where a Google doc can come in handy.</div>
+      </div>
+      <div class="best-practices">
+        
+        <div class="tips-divide"></div>
+        <div class="actcard-icon-section">
+          <div class="actcard-icon-row">
+            <div>Class Size: Large, Small</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Instructional Mode: In-Person, Hybrid, Flipped, Online </div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Engagement: Individual, Pairs, Small Groups, Large Group</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Learning Strategy: Metacognition</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>
+              Digital Tools or Programs Required: Google Doc, Canvas, Poll Everywhere</div>
+          </div>
+        </div>
+        
+        <div class="tips-divide"></div>
+        <div id="actprops" class="active">
+          <div class="actprops-col">
+            <div class="actprops-title large">Type of Interaction</div>
+            <div>Student-Instructor</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">Activity Time</div>
+            <div>5 - 10 minutes</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">PREP TIME</div>
+            <div>Low: Less than 5 minutes</div>
+          </div>
+        </div>
+        <div class="tips-divide"></div>
+        
+        <h4>Synchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Allow students a few minutes at the beginning where they “mind dump” in a digital space</li>
+          <li class="bp">This can be done privately (as a self-reflective exercise) or shared with the class or just the instructor through Google Doc</li>
+        </ul>
+        </div>
+        <h4>Asynchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Post a check-in or participation only quiz that prompts students to “mind dump” at the beginning of a unit</li>
+          <li class="bp">This can be done privately (as a self-reflective exercise) or shared with the class or just the instructor through Google Doc</li>
+
+        </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--   -->
+<div class="activity-card-wrapper" id="Key Takeaway Discussion">
+  <div id="Key Takeaway Discussion" class="activity-card" tabindex="0">
+    <button class="close-card-button">
+      <img class="close-card-icon" src="/styles/svg/x-lg.svg" draggable="false" ondragstart="return false;" alt="close" />
+    </button>
+    <div class="act-icon-bg"><img class="activity-card-icon" src="/styles/svg/key.svg" draggable="false" ondragstart="return false;" alt=""/></div>
+    <div class="activity-info">
+      <div class="activity-info-top">
+        <div class="activity-card-title">Key Takeaway Discussion</div>
+        <div class="activity-card-description">Have students post one key takeaway from the topic that was learned today or module/week. This can include a highlight, ah-ha! moment, a challenge, a problem/solution, a relationship with other content, a pattern etc so that students can reflect on their learning, learn from and connect with their peers. After all students post, instructor close the forum and summarize the findings or revisit some topics to transition better to next topic/module/week.</div>
+      </div>
+      <div class="best-practices">
+        
+        <div class="tips-divide"></div>
+        <div class="actcard-icon-section">
+          <div class="actcard-icon-row">
+            <div>Class Size: Large, Small</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Instructional Mode: In-Person, Hybrid, Flipped, Online </div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Engagement: Individual, Large Group</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>Learning Strategy: Metacognition</div>
+          </div>
+          <div class="actcard-icon-row">
+            <div>
+              Digital Tools or Programs Required: Google Doc, Canvas, Poll Everywhere</div>
+          </div>
+        </div>
+        
+        <div class="tips-divide"></div>
+        <div id="actprops" class="active">
+          <div class="actprops-col">
+            <div class="actprops-title large">Type of Interaction</div>
+            <div>Student-Instructor</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">Activity Time</div>
+            <div>1 - 5 minutes</div>
+          </div>
+          <div class="actprops-col">
+            <div class="actprops-title large">PREP TIME</div>
+            <div>Low: Less than 5 minutes</div>
+          </div>
+        </div>
+        <div class="tips-divide"></div>
+        
+        <h4>Synchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">At the end of the live lecture, prompt students to share their key takeaway through Canvas survey, Google forms, etc.</li>
+          <li class="bp">Collect responses through Canvas Assignment or Quiz/Survey to share with instructor, or Canvas Discussion to share with class</li>
+        </ul>
+        </div>
+        <h4>Asynchronous</h4>
+        <div class="best-practices-notes">
+          <ul class="bp-list">
+          <li class="bp">Post this as a discussion board at the end of a module/unit</li>
+          <li class="bp">Collect responses through Canvas Assignment or Quiz/Survey to share with instructor, or Canvas Discussion to share with class</li>
+          <li class="bp">If using Canvas Discussion, make sure to check the option “Users must post before seeing replies”</li>
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+  
+</div>
+</div>
+  </div>
+  <div class="tips-col">
+    <div class="logo-box">
+<div class="logo-box-inner">
+<a class="plain noheight" href="/">
+<img class="logo-icon" src="/styles/svg/toolbox-blue.svg" draggable="false" ondragstart="return false;" alt="toolbox logo"/>
+</a>
+<h2>Active Learning Library</h2>
+<div class="tips-divide"></div>
+<h3>Diversify Your Lesson</h3>
+<p>Using diverse activities promotes student engagement and learning. It can also make the lesson more rewarding to teach.</p>
+<div class="tips-divide"></div>
+<h3>Start Small</h3>
+<p>You don't have to revolutionize the way you teach tomorrow. Try integrating just one new activity type into your lesson.</p>
+<div class="tips-divide"></div>
+<h3>Explore Your Options</h3>
+<p>Use the filters provided to identify activities that may work best for your specific teaching context.</p>
+</div>
+<div class="banner-box">
+<div>Ready to create a lesson plan?</div>
+<div>Try the <a href="/">Lesson Planning Tool</a></div>
+</div>
+</div>
+  </div>
+</div>
+
+
+
+  <!-- </div> -->
+</div>
+<div class="copyright-row">
+  <div id="copyright-text">&copy <script>document.write(/\d{4}/.exec(Date())[0])</script> Teaching Tools</div>
+</div>
+      
+    </footer>
+  
+  <script defer src="https:/.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"76b24c018d9a7a93","version":"2022.11.0","r":1,"token":"8cc52f9f81ff44beb5e0313e994cfd1f","si":100}' crossorigin="anonymous"></script>
+</body>
+
+</html>
