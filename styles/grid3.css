@@ -20,6 +20,44 @@
     --orange: #f19337;
 }
 
+.banner {
+  display: flex;
+  width: 73%;
+  height: 100px;
+  background-color: #f2f2f2;
+  border: 2px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  margin-left: 25px;
+}
+
+.banner-icon {
+  height: 60px;
+}
+.banner-title {
+  text-align:left;
+  font-size: 30px;
+  border-bottom: 2px solid #ccc; /* add a bottom border */
+  margin-bottom: 20px; /* remove the margin below the text */
+  width: 95%;
+}
+.banner-text {
+  text-align:left;
+  width: 85%;
+  padding-left: 40px;
+}
+
+.image-container {
+  width: 100px; /* set the width of the container */
+  height: 100px; /* set the height of the container */
+  border-radius: 50%; /* make the container circular */
+  border: 2px solid #ccc; /* add a grey border */
+  overflow: hidden; /* hide any parts of the image that extend beyond the container */
+  display: flex; /* enable flexbox layout */
+  align-items: center; /* center the image vertically */
+  justify-content: center; /* center the image horizontally */
+}
+
 .sr-only:not(:focus):not(:active) {
   clip: rect(0 0 0 0); 
   clip-path: inset(50%);
@@ -3361,7 +3399,7 @@ input.validation-error {
 
 .act-icon-bg{
   display: flex;
-  background-color: var(--highlighta);
+  background-color: #0064a4;
   padding: 1rem;
   border-radius: 50%;
   border: 2px solid var(--highlighta);
