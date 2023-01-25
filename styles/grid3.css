@@ -20,24 +20,6 @@
     --orange: #f19337;
 }
 
-.banner {
-  background-color: #0064a4;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* height: 75px; */
-}
-.banner img {
-  margin-right: 10px;
-}
-.under-banner {
-  text-align: center;
-}
-
-
 .sr-only:not(:focus):not(:active) {
   clip: rect(0 0 0 0); 
   clip-path: inset(50%);
@@ -1162,7 +1144,7 @@ margin: 5vh auto;
 .content-grid-template {
     flex: 0 1 92rem;
     display: grid;
-    /* grid-template-columns: minmax(18.8rem, 2fr) 5fr minmax(18.8rem, 2fr); */
+    grid-template-columns: minmax(18.8rem, 2fr) 5fr minmax(18.8rem, 2fr);
     grid-template-rows: auto 1fr;
     grid-template-areas: "leftcol cards tips";
     gap: 1rem;
@@ -3379,7 +3361,7 @@ input.validation-error {
 
 .act-icon-bg{
   display: flex;
-  background-color: #0064a4;
+  background-color: var(--highlighta);
   padding: 1rem;
   border-radius: 50%;
   border: 2px solid var(--highlighta);
