@@ -758,12 +758,11 @@ button.ui-button {
 
 
 .full-row {
-  flex-flow: column;
+  display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 500vh;
-  margin-top: 20px;
-  width: 75%;
+  flex-flow: column;
+  min-height: 100vh;
 } 
 
 .white-bg{
