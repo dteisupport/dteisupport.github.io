@@ -757,7 +757,6 @@ button.ui-button {
 
 
 
-/* 
 .full-row {
   flex-flow: column;
   align-items: center;
@@ -765,7 +764,7 @@ button.ui-button {
   min-height: 500vh;
   margin-top: 20px;
   width: 75%;
-} */
+} 
 
 .white-bg{
   background-color: #fcfcfc;
